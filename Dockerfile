@@ -16,6 +16,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     fonts-noto-color-emoji
 
 COPY out/make/deb/x64 /app
-RUN dpkg -i /app/electron-test-app_1.0.0_amd64.deb
+RUN dpkg -i /app/electron-docker-test-app_1.0.0_amd64.deb
 
-CMD electron-test-app --no-sandbox --enable-logging
+CMD electron-docker-test-app --no-sandbox --enable-logging

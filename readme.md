@@ -13,6 +13,7 @@ docker build -t electron-docker-test-app .
 
 ## 3. Run Docker Image
 ```shell
+xhost +
 docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" electron-docker-test-app
 ```
 
