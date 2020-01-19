@@ -13,7 +13,7 @@ docker build -t electron-docker-test-app .
 
 ## 3. Run Docker Image
 ```shell
-xhost +
+xhost local:root
 docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" electron-docker-test-app
 ```
 
@@ -25,3 +25,5 @@ https://www.electronforge.io/templates/typescript-+-webpack-template
 Run Electron apps in Docker
 https://medium.com/@SaravSun/running-gui-applications-inside-docker-containers-83d65c0db110
 
+Limit `xhost` access scope
+https://stackoverflow.com/questions/43015536/xhost-command-for-docker-gui-apps-eclipse
